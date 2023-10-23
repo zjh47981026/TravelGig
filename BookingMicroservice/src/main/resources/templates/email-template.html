@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        th, td {
+            text-align: center;
+        }
+        .col-first {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <p th:text="${greeting}"></p>
+    <p>Your Booking is Confirmed!</p>
+    <p>Thank you for choosing our service. Here are booking details:</p>
+    <table>
+        <tr>
+            <td class ="col-first">Booking ID:</td>
+            <td th:text="${bookingId}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first" >Username:</td>
+            <td th:text="${username}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Hotel:</td>
+            <td th:text="${hotelname}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Number of Guests:</td>
+            <td th:text="${numGuests}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Number of Rooms:</td>
+            <td th:text="${numRooms}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first" >Room Type:</td>
+            <td th:text="${roomType}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Check-in:</td>
+            <td th:text="${checkin}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Check-out:</td>
+            <td th:text="${checkout}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first">Booking Date:</td>
+            <td th:text="${date}">Unknown</td>
+        </tr>
+        <tr>
+            <td class ="col-first"><b>Order Total: </b></td>
+            <td th:text="${orderTotal}">Unknown</td>
+        </tr>
+    </table>
+    <h4>Guest Details: </h4>
+    <table border="1" style="border-collapse: collapse">
+        <tr>
+            <th>
+                FirstName
+            </th>
+            <th>
+                LastName
+            </th>
+            <th>
+                Age
+            </th>
+            <th>
+                Gender
+            </th>
+        </tr>
+        <tr th:each="guest : ${guests}">
+            <td th:text="${guest.firstName}"></td>
+            <td th:text="${guest.lastName}"></td>
+            <td th:text="${guest.age}"></td>
+            <td th:text="${guest.gender}"></td>
+        </tr>
+    </table>
+</section>
+<footer>
+    <p>Thanks,</p>
+    <p>TravelGig Customer Service Team</p>
+</footer>
+</body>
+</html>

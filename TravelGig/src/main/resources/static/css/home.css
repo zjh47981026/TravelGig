@@ -1,0 +1,11 @@
+th, td {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+#list li {
+    text-align: left;
+}
