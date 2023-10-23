@@ -15,10 +15,10 @@ public class AppConfig {
     @Bean
     public DataSource dataSource(){
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl("jdbc:mysql://database-2.cqwro6xcwoqn.us-east-1.rds.amazonaws.com:3306/Hotel?createDatabaseIfNotExist=true&serverTimezone=UTC");
+        dataSource.setUrl("");
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUsername("admin");
-        dataSource.setPassword("zhangjiahao");
+        dataSource.setUsername("");
+        dataSource.setPassword("");
         return dataSource;
     }
 
